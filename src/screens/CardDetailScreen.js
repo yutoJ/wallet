@@ -44,25 +44,25 @@ class CardDetailScreen extends React.Component {
           <Icon
             raised
             name='shopping-cart'
-            size='40'
+            size={40}
             color='#00aced'
             onPress={() => { this.props.navigation.navigate('Payment') }} />
           <Icon
             raised
             name='payment'
-            size='40'
+            size={40}
             color='#00aced'
             onPress={() => { this.props.navigation.navigate('Charge') }} />
           <Icon
             raised
             name='list'
-            size='40'
+            size={40}
             color='#00aced'
             onPress={() => { this.props.navigation.navigate('Transaction') }} />
           <Icon
             raised
             name='control-point'
-            size='40'
+            size={40}
             color='#00aced'
             onPress={() => { this.props.navigation.navigate('Point') }} />
         </View>

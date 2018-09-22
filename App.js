@@ -1,6 +1,5 @@
 import { Platform } from 'react-native';
 import { createStackNavigator, TabNavigator } from 'react-navigation';
-import ScreenHeader from './src/components/ScreenHeader';
 import LoginScreen from './src/screens/LoginScreen';
 import CardListScreen from './src/screens/CardListScreen';
 import CardDetailScreen from './src/screens/CardDetailScreen';
