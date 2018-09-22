@@ -28,7 +28,7 @@ class CardDetailScreen extends React.Component {
       <View style={styles.container}>
         <View style={{ alignItems: 'center', padding: 20}}>
           <Image
-            style={{ width: 350, height: 250}}
+            style={styles.cardImage}
             source={require('../assets/card.jpg')}
           />
         </View>
@@ -68,15 +68,9 @@ class CardDetailScreen extends React.Component {
         </View>
         <View style={styles.message}>
           <Text style={{marginBottom: 10}}>
-            The idea with React Native Elements is more about component structure than actual design.
+            ※入金の手数料は一律100円です
           </Text>
         </View>
-
-        <Button
-          icon={{name: 'code'}}
-          backgroundColor='#03A9F4'
-          buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-          title='VIEW NOW' />
       </View>
     )
   }
@@ -91,6 +85,10 @@ const styles = StyleSheet.create({
   middleBody: {
     flex: 1,
     backgroundColor: '#FFFF00'
+  },
+  cardImage: {
+    width: Dimensions.get('window').width*9/10,
+    height: Dimensions.get('window').width*4/7,
   },
   buttonGroup: {
     flex: 1,
