@@ -6,7 +6,7 @@ import {
   Icon,
 } from 'react-native-elements';
 
-class CardDetailScreen extends React.Component {
+class CardDatailScreen extends React.Component {
   state = {
     card: {},
     balance: 5000,
@@ -28,17 +28,19 @@ class CardDetailScreen extends React.Component {
       <View style={styles.container}>
         <View style={{ alignItems: 'center', padding: 20}}>
           <Image
-            style={styles.cardImage}
+            style={styles.image}
             source={require('../assets/card.jpg')}
           />
         </View>
-        <View style={styles.middleBody}>
-          <Text style={{fontSize: 30}}>
-            Balance: {this.state.balance}円
-          </Text>
-          <Text style={{fontSize: 30}}>
-            Point: {this.state.point}Pt
-          </Text>
+        <View style = {{padding: 20}}>
+          <View style = {styles.row}>
+            <View style = {styles.info}>
+              <Text style={{fontSize: 30}}>{this.state.balance}円</Text>
+            </View>
+            <View style = {styles.info}>
+              <Text style={{fontSize: 30}}>{this.state.point}Pt</Text>
+            </View>
+          </View>
         </View>
         <View style={styles.buttonGroup}>
           <Icon
@@ -82,11 +84,7 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: '#FFFDF6'
   },
-  middleBody: {
-    flex: 1,
-    backgroundColor: '#FFFF00'
-  },
-  cardImage: {
+  image: {
     width: Dimensions.get('window').width*9/10,
     height: Dimensions.get('window').width*4/7,
   },
@@ -94,12 +92,42 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignSelf: 'center',
-    alignItems: 'stretch',
-    paddingTop: 30
+    alignItems: 'stretch'
   },
   message: {
     flex: 1,
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingBottom: 20,
+    marginBottom: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: '#E2E2E2',
+  },
+  info: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  about: {
+    paddingBottom: 20,
+    marginBottom: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: '#E2E2E2',
+  },
+  aboutText: {
+    fontWeight: 'bold',
+  },
+  bookingBar: {
+    position: 'absolute',
+    bottom: 0,
+    padding: 15,
+    flexDirection: 'row',
+    borderTopWidth: 1,
+    borderTopColor: '#E2E2E2',
+    backgroundColor: 'white',
+    alignItems: 'center',
   }
 });
 
-export default CardDetailScreen;
+export default CardDatailScreen;

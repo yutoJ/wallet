@@ -14,7 +14,7 @@ import {
   SearchBar,
 } from 'react-native-elements';
 
-export default class CardPlusList extends Component {
+export default class CardList extends Component {
 
   someMethod() {
     console.log('aa');
@@ -22,7 +22,6 @@ export default class CardPlusList extends Component {
 
   render() {
     const { cardList } = this.props;
-    console.log(cardList);
     return (
       <View style = {styles.container}>
         <SearchBar
@@ -30,8 +29,8 @@ export default class CardPlusList extends Component {
           onClearText={this.someMethod}
           placeholder='Type Here...' />
         <FlatList
-          style={styles.list}
           data={cardList}
+          keyExtractor={item => item.key}
           renderItem={({item}) =>
             <TouchableOpacity onPress={() => { this.props.navigation.navigate('CardDetail', { card: item }); }} style={styles.item}>
               <Image style={styles.image} source= {require('../assets/card.jpg')} />
@@ -39,7 +38,7 @@ export default class CardPlusList extends Component {
               <Text>{`${item.type}`}</Text>
             </TouchableOpacity>
           }
-          keyExtractor={(item, index) => item.id}
+          style={styles.list}
         />
       </View>
     );

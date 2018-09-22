@@ -10,10 +10,12 @@ class CardListScreen extends React.Component {
   state = {
     cardList: [
       {
+        key: '1',
         type: 'Prepaid',
         name: 'Coffee Cups'
       },
       {
+        key: '2',
         type: 'Prepaid',
         name: 'Morimori Gym'
       }
@@ -32,7 +34,6 @@ class CardListScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: '100%',
     backgroundColor: '#FFFDF6',
   },
   button: {
