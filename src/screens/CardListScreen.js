@@ -11,13 +11,11 @@ class CardListScreen extends React.Component {
     cardList: [
       {
         type: 'Prepaid',
-        name: 'Coffee Cups',
-        key: 1
+        name: 'Coffee Cups'
       },
       {
         type: 'Prepaid',
-        name: 'Morimori Gym',
-        key: 2
+        name: 'Morimori Gym'
       }
     ],
   }
