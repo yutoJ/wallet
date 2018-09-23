@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+//import { connect } from 'react-redux';
 import { View, Platform } from 'react-native';
 import { createStackNavigator, TabNavigator, NavigationActions } from 'react-navigation';
 import LoginScreen from './screens/LoginScreen';
@@ -59,12 +59,13 @@ class AppWithNavigationState extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  nav: state.nav,
-});
+//const mapStateToProps = state => ({
+//  nav: state.nav,
+//});
 
-const mapDispatchToProps = dispatch => ({
-  dispatch: (action) => dispatch(action),
-});
+//const mapDispatchToProps = dispatch => ({
+//  dispatch: (action) => dispatch(action),
+//});
 
-export default connect(mapStateToProps, mapDispatchToProps)(AppWithNavigationState);
+//export default connect(mapStateToProps, mapDispatchToProps)(AppWithNavigationState);
+export default AppWithNavigationState;
