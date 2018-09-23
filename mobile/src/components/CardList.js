@@ -21,7 +21,7 @@ export default class CardList extends Component {
   }
 
   render() {
-    const { cardList } = this.props;
+    const { cards } = this.props;
     return (
       <View style = {styles.container}>
         <SearchBar
@@ -29,7 +29,7 @@ export default class CardList extends Component {
           onClearText={this.someMethod}
           placeholder='Type Here...' />
         <FlatList
-          data={cardList}
+          data={cards}
           keyExtractor={item => item.key}
           renderItem={({item}) =>
             <TouchableOpacity onPress={() => { this.props.navigation.navigate('CardDetail', { card: item }); }} style={styles.item}>
